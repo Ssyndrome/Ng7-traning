@@ -1,0 +1,24 @@
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>姓名</th>
+    <th>年龄</th>
+    <th>操作</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let character of characters">
+    <td>{{ character.id }}</td>
+    <td>{{ character.name }}</td>
+    <td>{{ character.age }}</td>
+    <td>
+      <button
+        class="btn btn-outline-primary"
+        (click)="goToSearchResult(character.searchResult)">
+        搜寻结果
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>
